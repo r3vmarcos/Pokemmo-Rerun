@@ -1,0 +1,256 @@
+body {
+      font-family: Arial, sans-serif; /* Usando uma fonte interna comum */
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f0f2f5, #e0e4eb); /* Fundo com gradiente suave */
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      background: #2c3e50; /* Azul escuro para o cabeçalho */
+      color: #ecf0f1; /* Texto branco-acinzentado */
+      padding: 1.0rem;
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      letter-spacing: 3px; /* Aumentado o espaço entre as letras */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 2rem;
+
+    }
+
+        h2 {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 1rem;
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      letter-spacing: 2px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+        .top-github-link-container { /* Novo estilo para o link no topo */
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #34495e; /* Cor similar ao cabeçalho */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .top-github-button { /* Estilo para o botão no topo */
+        background-color: #0e65a0; /* Azul para o botão */
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none; /* Remove sublinhado padrão do link */
+        display: inline-block; /* Permite padding e width/height */
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .top-github-button:hover {
+        background-color: #2980b9; /* Azul mais escuro no hover */
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #filters {
+      background: #ffffff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px; /* Cantos mais arredondados */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content:space-between;
+      gap: auto;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    #filters label {
+      font-weight: 500;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #filters select,
+    #filters button {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    #filters select:focus,
+    #filters button:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+    }
+
+    #filters button {
+      background-color: #0e65a0; /* Azul para o botão */
+      color: white;
+      border: none;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #filters button:hover {
+      background-color: #2980b9; /* Azul mais escuro no hover */
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #total-value {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #168f48; /* Verde para o total */
+      margin-left: 10px;
+    }
+
+    table {
+      width: 90%;
+      max-width: 1200px;
+      border-collapse: separate; /* Para aplicar border-radius na tabela */
+      border-spacing: 0;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      border-radius: 12px; /* Cantos arredondados para a tabela */
+      overflow: hidden; /* Garante que os cantos arredondados funcionem */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #e0e0e0; /* Bordas mais claras */
+      color: #333;
+      vertical-align: middle;
+    }
+
+    th {
+      background-color: #34495e; /* Azul acinzentado para cabeçalhos */
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: center; /* Centraliza todos os cabeçalhos por padrão */
+    }
+
+    /* Alinhamento das colunas de dados */
+    .align-center { text-align: center; }
+    .align-left { text-align: left; }
+
+    /* Estilos para as linhas da tabela */
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9; /* Listras para melhor legibilidade */
+    }
+
+    tbody tr:hover {
+      background-color: #f0f8ff; /* Efeito de hover suave */
+      transition: background-color 0.2s ease;
+    }
+
+    .footer-total {
+      font-weight: bold;
+      position: sticky;
+      bottom: 0;
+      background: #2c3e50; /* Mesma cor do cabeçalho */
+      color: #ecf0f1;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #2c3e50;
+      width: 100%;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1.1rem;
+    }
+
+    /* Cores das regiões */
+    .region-Kanto { background-color: #ffe0e0 !important; }
+    .region-Johto { background-color: #e0f0ff !important; }
+    .region-Hoenn { background-color: #fffbe0 !important; }
+    .region-Sinnoh { background-color: #e0ffe0 !important; }
+    .region-Unova { background-color: #f5e0ff !important; }
+    .checked-row {
+      background-color: #f75a5a !important; /* Vermelho mais suave para linha marcada */
+      box-shadow: inset 3px 0 0 #f82811; /* Borda lateral para destaque */
+    }
+
+    /* Estilo para tipos e fraquezas */
+    .tipo {
+      font-weight: 600; /* Um pouco mais de peso */
+      color: #fff;
+      border-radius: 6px; /* Cantos levemente menos arredondados */
+      padding: 3px 8px; /* Padding ajustado */
+      display: inline-block;
+      margin: 2px; /* Espaço entre fraquezas */
+      font-size: 0.85rem;
+      white-space: nowrap;
+      border: 1px solid black; /* Borda preta adicionada */
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+    }
+
+    /* Cores dos tipos (mantidas as suas) */
+    .tipo-Pedra    { background-color: #8b3e21; }
+    .tipo-Dragão   { background-color: #6F35FC; }
+    .tipo-Elétrico { background-color: #e4c341; }
+    .tipo-Fada     { background-color: #ff7cb1; }
+    .tipo-Lutador  { background-color: #ef6138; }
+    .tipo-Fogo     { background-color: #ff2b3c; }
+    .tipo-Voador   { background-color: #93b2c7; }
+    .tipo-Fantasma { background-color: #a55da5; }
+    .tipo-Grama    { background-color: #57a52a; }
+    .tipo-Terra    { background-color: #eca144; }
+    .tipo-Gelo     { background-color: #86d2f5; }
+    .tipo-Normal   { background-color: #A8A77A; }
+    .tipo-Veneno   { background-color: #af61f3; }
+    .tipo-Psíquico { background-color: #f81c91; }
+    .tipo-Rocha    { background-color: #B6A136; }
+    .tipo-Aço      { background-color: #9090a5; }
+    .tipo-Água     { background-color: #2e70ff; }
+    .tipo-Inseto   { background-color: #bacf1a; }
+    .tipo-Sombrio  { background-color: #264d40; }
+    .tipo-Elite4  { background-color: #ffffff; color: #000000; }
+    .tipo-Treinador  { background-color: #000000; }
+    .tipo-Misto    { background-color: #6d6d6d; }
+
+    /* Cores para o Countdown */
+    .text-green {
+      font-weight: bold;
+      background-color: #d4edda; /* Fundo verde claro */
+      color: #155724; /* Texto verde escuro */
+      padding: 4px 8px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .text-red {
+      font-weight: bold;
+      background-color: #fc3647; /* Fundo vermelho claro */
+      color: #721c24; /* Texto vermelho escuro */
+      padding: 4px 8px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }

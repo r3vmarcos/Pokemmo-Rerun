@@ -133,7 +133,6 @@ function renderTabela() {
     }
 
     tr.innerHTML = `
-      <!-- Checkbox column removed -->
       <td class="align-center">${regiao}</td>
       <td class="align-left">${cidade}</td>
       <td class="align-center"><span class="tipo ${tipoClass}">${tipo}</span></td>

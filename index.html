@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gym/Elit4/Routes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-github-link-container">
+      <a href="https://github.com/r3vmarcos/Pokemmo-Rerun" target="_blank" class="top-github-button">Ver no GitHub</a>
+  </div>
+  <h1>PokeMMO</h1>
+  <h2>Gym/Elite4/Routes - Rerun</h2>
+
+  <div id="filters">
+    <button onclick="resetProgresso()">Resetar Progresso</button>
+    <label>Filtrar por Região:
+      <select id="filter-region">
+        <option value="">Todas</option>
+        <option value="Kanto">Kanto</option>
+        <option value="Johto">Johto</option>
+        <option value="Hoenn">Hoenn</option>
+        <option value="Sinnoh">Sinnoh</option>
+        <option value="Unova">Unova</option>
+      </select>
+    </label>
+    <label>Bônus:
+      <select id="bonus-multiplicador">
+        <option value="0">Sem bônus</option>
+        <option value="50">Amulet Coin +50%</option>
+        <option value="75">Encantamento +75%</option>
+        <option value="100">Encantamento +100%</option>
+      </select>
+    </label>
+    <div style="font-weight:bold; font-size:1.1rem;">TOTAL ARRECADADO: <span id="total-value">$ 0</span></div>
+  </div>
+
+  <table id="tabela">
+    <thead>
+      <tr>
+        <!-- Checkbox column removed -->
+        <th class="align-center">Região</th>
+        <th class="align-left">Cidade</th>
+        <th class="align-center">Tipo</th>
+        <th class="align-left">Fraqueza</th>
+        <th class="align-center">Valor ($)</th>
+        <th class="align-center">Countdown</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="footer-total" id="footer-total">TOTAL ARRECADADO: $ 0</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
